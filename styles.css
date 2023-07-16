@@ -10,8 +10,6 @@ body *{
 body{
     background-color: black;
     font-family: Arial, Helvetica, sans-serif;
-    min-width: 1125px;
-    min-height: 2436px;
 }
 
 #navigation-bar{
@@ -19,7 +17,7 @@ body{
     border-bottom: solid 1px #eef0e0;
     position: fixed;
     width: 100vw;
-    height: 100px;
+    height: 50px;
     padding-left: 20px;
     padding-right: 20px;
     font-size: 30px;
@@ -29,7 +27,7 @@ body{
 }
 
 #navbar-image-box{
-    height: 80%
+    height: 60%
 }
 
 #navbar-image-logo{
@@ -37,7 +35,7 @@ body{
 }
 
 #logo-div{
-    margin-top: 150px;
+    margin-top: 70px;
     display: inline-block;
 }
 
