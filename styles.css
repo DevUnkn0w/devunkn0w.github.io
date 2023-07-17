@@ -17,9 +17,8 @@ body{
     border-bottom: solid 1px #eef0e0;
     position: fixed;
     width: 100vw;
-    height: 50px;
+    height: 87px;
     padding-left: 5px;
-    font-size: 30px;
     display: flex;
     align-items: center;
     top:0;
@@ -95,6 +94,9 @@ body{
         width: 80%;
         margin-left: 10%;
         margin-top: 2.666667vw;
+    }
+    #navigation-bar{
+        height: 11.682243vw;
     }
     #logo-div{
         margin-top: 20vw;
