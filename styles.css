@@ -100,11 +100,17 @@ body{
     outline: #eef0e0 solid 2px;
 }
 
-.button:focus{
-    box-shadow: none;
+.button:hover .icon{
+    filter:brightness(350%) contrast(350%);
 }
 
-.button:hover .icon{
+.button:active{
+    color: #212121;
+    border-color: #888;
+    outline: #eef0e0 solid 2px;
+}
+
+.button:active .icon{
     filter:brightness(350%) contrast(350%);
 }
 
