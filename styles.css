@@ -100,6 +100,10 @@ body{
     outline: #eef0e0 solid 2px;
 }
 
+.button:focus{
+    box-shadow: none;
+}
+
 .button:hover .icon{
     filter:brightness(350%) contrast(350%);
 }
