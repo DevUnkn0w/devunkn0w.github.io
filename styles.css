@@ -73,6 +73,9 @@ body{
     cursor: pointer;
     text-decoration: none;
     margin-top: 10px;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 2s linear;
 }
 
 .button-content-div{
