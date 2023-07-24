@@ -20,6 +20,22 @@ function switchHover() {
     enableHover()
 }
 
+function wechatInfo(){
+    let logoWidth = document.getElementById('navbar-image-box').clientWidth*0.5;
+    document.getElementById('navbar-image-box').style.left = 'calc(50% - '+logoWidth+'px)';
+    document.getElementById('nav-back-button').style.visibility = 'visible';
+    document.getElementById('nav-back-button').style.opacity = '1';
+    document.getElementById('wechat-content').style.left = '0';
+}
+
+function toHome(){
+    document.getElementById('nav-back-button').style.visibility = 'hidden';
+    document.getElementById('nav-back-button').style.opacity = '0';
+    document.getElementById('navbar-image-box').style.left = '0';
+    document.getElementById('wechat-content').style.left = 'calc(100vw + 10px)';
+
+}
+
 window.onload = function(){
     window.setTimeout(function(){
         document.getElementById('twitter-button').style.visibility = 'visible';

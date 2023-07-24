@@ -25,15 +25,25 @@ body{
 }
 
 #navbar-image-box{
-    height: 85%
+    position: relative;
+    height: 85%;
+    left: 0;
+    transition: left 1.5s;
+    z-index: 2;
 }
 
 #navbar-image-logo{
     height: 100%;
 }
 
+#main-content{
+    border: solid 0px #eef0e0;
+    width: 100vw;
+    left: 0;
+    z-index: 1;
+}
+
 #logo-div{
-    margin-top: 150px;
     height: 200px;
 }
 
@@ -44,6 +54,7 @@ body{
 }
 
 #name-div{
+    margin-top: 20px;
     color: #eef0e0;
     font-size: 30px;
 }
@@ -52,14 +63,43 @@ body{
     margin-top: 50px;
     display: flex;
     flex-direction: column;
+}
 
+#nav-back-button{
+    height: 100%;
+    color: white;
+    display: flex;
+    align-items: center;
+    font-size: 30px;
+    font-weight: 700;
+    letter-spacing: 0.7px;
+    cursor: pointer;
+    text-decoration: none;
+    position: absolute;
+    z-index: 1;
+    margin-left: 15px;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 2s, opacity 2s ease;
+}
 
+#window{
+    display: flex;
+    margin-top: 150px;
+}
+
+#wechat-content{
+    position: absolute;
+    width: 100vw;
+    color: white;
+    border: solid 1px white;
+    left: calc(100vw + 10px);
+    transition: left 2s;
 }
 
 .box{
     border: solid 0px #eef0e0;
     margin-left: calc(50% - 300px);
-    margin-top: 20px;
     width: 600px;
     display: flex;
     justify-content: center;
@@ -85,7 +125,6 @@ body{
     font-weight: 700;
     font-size: 28px;
     letter-spacing: 0.7px;
-    border: solid 0px red;
     display: flex;
     padding-left: 23px;
     padding-right: 23px;
@@ -122,17 +161,19 @@ body.isHover .button:hover .icon{
     .box{
         width: 80%;
         margin-left: 10%;
-        margin-top: 2.666667vw;
     }
     #navigation-bar{
         height: 11.682243vw;
     }
-    #logo-div{
+    #window{
         margin-top: 20vw;
+    }
+    #logo-div{
         height: 26.666667vw;
     }
     #name-div{
         font-size: 4vw;
+        margin-top: 2.666667vw;
     }
     #button-div{
         margin-top: 6.666667vw;
@@ -144,5 +185,9 @@ body.isHover .button:hover .icon{
         padding-left: 3vw;
         padding-right: 3vw;
         font-size: 3.3333333vw;
+    }
+    #nav-back-button{
+        font-size: 4vw;
+        margin-left: 2vw;
     }
 }
