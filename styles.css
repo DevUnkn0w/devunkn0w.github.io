@@ -54,7 +54,7 @@ body{
     display: flex;
     top: 87px;
     overflow: hidden;
-    position: relative;
+    position: fixed;
     height: calc(100vh - 87px);
 }
 
