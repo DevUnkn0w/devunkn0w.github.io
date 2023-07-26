@@ -74,6 +74,10 @@ body{
 #home::-webkit-scrollbar {
     display: none;
 }
+#home-inner{
+    width: 100%;
+    padding-bottom: 15vh;
+}
 
 #logo-div{
     height: 200px;
@@ -96,7 +100,6 @@ body{
     margin-top: 50px;
     display: flex;
     flex-direction: column;
-    padding-bottom: 15vh;
 }
 
 #wechat-panel{
@@ -115,7 +118,10 @@ body{
 #wechat-panel::-webkit-scrollbar {
     display: none;
 }
-
+#wechat-inner-box{
+    width: 100%;
+    padding-bottom: 20vh;
+}
 #wechat-panel-logo{
     color: #eef0e0;
     margin-top: 30px;
@@ -146,9 +152,6 @@ body{
     height: 100%;
     margin-left: 12px;
     margin-right: 12px;
-}
-#wechat-method-box{
-    padding-bottom: 20vh;
 }
 #wechat-method-content-telegram-icon {
     top: 3px;
