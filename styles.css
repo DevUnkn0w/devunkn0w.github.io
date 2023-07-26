@@ -53,7 +53,7 @@ body{
 #canvas{
     display: flex;
     margin-top: 87px;
-    position: relative;
+    position: fixed;
     overflow-x: hidden;
     height: calc(100vh - 87px);
 }
@@ -97,6 +97,7 @@ body{
     left: calc(100vw + 10px);
     transition: left 2s;
     z-index: 5;
+    padding-bottom: 15vh;
 }
 
 #wechat-panel-logo{
