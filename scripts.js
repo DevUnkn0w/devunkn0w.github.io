@@ -21,13 +21,15 @@ function switchHover() {
 }
 
 function wechatInfo(){
+    document.getElementById('canvas').scrollHeight = document.getElementById('wechat-panel').clientHeight
     let logoWidth = document.getElementById('navbar-image-box').clientWidth*0.5;
     document.getElementById('navbar-image-box').style.left = 'calc(50% - '+logoWidth+'px)';
     document.getElementById('nav-back-button').style.visibility = 'visible';
     document.getElementById('nav-back-button').style.opacity = '1';
     document.getElementById('wechat-panel').scrollTo({ top: 0, behavior: 'instant' });
     document.getElementById('wechat-panel').style.left = '0';
-    document.getElementById('wechat-panel').style.visibility = 'visible'
+    document.getElementById('wechat-panel').style.visibility = 'visible';
+    document.getElementById('wechat-panel').style.height = 'auto';
     document.getElementById('home').style.transitionDuration = '1s';
     document.getElementById('home').style.transitionTimingFunction = 'ease';
     document.getElementById('home').style.transitionDelay = '0s';
@@ -36,11 +38,13 @@ function wechatInfo(){
 }
 
 function toHome(){
+    document.getElementById('canvas').scrollHeight = document.getElementById('home').clientHeight;
     document.getElementById('nav-back-button').style.visibility = 'hidden';
     document.getElementById('nav-back-button').style.opacity = '0';
     document.getElementById('navbar-image-box').style.left = '0';
     document.getElementById('wechat-panel').style.left = 'calc(100vw + 10px)';
     document.getElementById('wechat-panel').style.visibility = 'hidden';
+    document.getElementById('wechat-panel').style.height = '0%';
     document.getElementById('home').scrollTo({ top: 0, behavior: 'instant' });
     document.getElementById('home').style.transitionTimingFunction= 'ease-in';
     document.getElementById('home').style.transitionDuration = '2.5s';
@@ -54,15 +58,6 @@ function centerLogo(){
     if(pos_wechatPanel===0){
         let logoWidth = document.getElementById('navbar-image-box').clientWidth*0.5;
         document.getElementById('navbar-image-box').style.left = 'calc(50% - '+logoWidth+'px)';
-    }
-}
-
-function resizeHome(){
-    let home = document.getElementById('home');
-    if(!(home.scrollHeight>home.clientHeight)){
-        let navHeight = document.getElementById('navigation-bar').clientHeight;
-        console.log(navHeight);
-        document.getElementById('home-inner').style.height = 'calc(100vh - '+navHeight+'px)'
     }
 }
 
@@ -94,6 +89,4 @@ window.onload = function(){
 };
 
 switchHover()
-//resizeHome()
 window.addEventListener('resize', centerLogo)
-//window.addEventListener('resize', resizeHome)
