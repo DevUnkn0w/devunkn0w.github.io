@@ -89,7 +89,7 @@ body{
     margin-top: 50px;
     display: flex;
     flex-direction: column;
-    padding-bottom: 20vh;
+    padding-bottom: 15vh;
 }
 
 #wechat-panel{
@@ -155,7 +155,7 @@ body{
     border: solid 1px #eef0e0;
     cursor: pointer;
     text-decoration: none;
-    margin-top: 10px;
+    margin-top: 12px;
     visibility: hidden;
     opacity: 0;
     transition: visibility 0s, opacity 2s linear;
@@ -300,6 +300,7 @@ body.isHover .button:hover .icon{
     }
     .button{
         height: 10vw;
+        margin-top: 1.6vw;
     }
     .button-content-div{
         padding-left: 3vw;
