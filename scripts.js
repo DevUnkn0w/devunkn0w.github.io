@@ -26,7 +26,6 @@ function wechatInfo(){
     document.getElementById('navbar-image-box').style.left = 'calc(50% - '+logoWidth+'px)';
     document.getElementById('nav-back-button').style.visibility = 'visible';
     document.getElementById('nav-back-button').style.opacity = '1';
-    document.getElementById('wechat-panel').scrollTo({ top: 0, behavior: 'instant' });
     document.getElementById('wechat-panel').style.left = '0';
     document.getElementById('wechat-panel').style.visibility = 'visible';
     document.getElementById('wechat-panel').style.height = 'auto';
