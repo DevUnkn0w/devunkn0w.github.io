@@ -1,23 +1,23 @@
 function switchHover() {
-    let lastTouchTime = 0
+    let lastTouchTime = 0;
     function enableHover() {
         if (new Date() - lastTouchTime < 500) return
-        document.body.classList.add('isHover')
+        document.body.classList.add('isHover');
     }
 
     function disableHover() {
-        document.body.classList.remove('isHover')
+        document.body.classList.remove('isHover');
     }
 
     function updateLastTouchTime() {
-        lastTouchTime = new Date()
+        lastTouchTime = new Date();
     }
 
-    document.addEventListener('touchstart', updateLastTouchTime, true)
-    document.addEventListener('touchstart', disableHover, true)
-    document.addEventListener('mousemove', enableHover, true)
+    document.addEventListener('touchstart', updateLastTouchTime, true);
+    document.addEventListener('touchstart', disableHover, true);
+    document.addEventListener('mousemove', enableHover, true);
 
-    enableHover()
+    enableHover();
 }
 
 function wechatInfo(){
@@ -27,6 +27,7 @@ function wechatInfo(){
     document.getElementById('nav-back-button').style.opacity = '1';
     document.getElementById('wechat-panel').scrollTo({ top: 0, behavior: 'instant' });
     document.getElementById('wechat-panel').style.left = '0';
+    document.getElementById('wechat-panel').style.visibility = 'visible'
     document.getElementById('home').style.transitionDuration = '1s';
     document.getElementById('home').style.transitionTimingFunction = 'ease';
     document.getElementById('home').style.transitionDelay = '0s';
@@ -39,12 +40,30 @@ function toHome(){
     document.getElementById('nav-back-button').style.opacity = '0';
     document.getElementById('navbar-image-box').style.left = '0';
     document.getElementById('wechat-panel').style.left = 'calc(100vw + 10px)';
+    document.getElementById('wechat-panel').style.visibility = 'hidden';
     document.getElementById('home').scrollTo({ top: 0, behavior: 'instant' });
     document.getElementById('home').style.transitionTimingFunction= 'ease-in';
     document.getElementById('home').style.transitionDuration = '2.5s';
     document.getElementById('home').style.transitionDelay = '0.3s';
     document.getElementById('home').style.visibility = 'visible';
     document.getElementById('home').style.opacity = '1';
+}
+
+function centerLogo(){
+    let pos_wechatPanel = document.getElementById('wechat-panel').getBoundingClientRect().left;
+    if(pos_wechatPanel===0){
+        let logoWidth = document.getElementById('navbar-image-box').clientWidth*0.5;
+        document.getElementById('navbar-image-box').style.left = 'calc(50% - '+logoWidth+'px)';
+    }
+}
+
+function resizeHome(){
+    let home = document.getElementById('home');
+    if(!(home.scrollHeight>home.clientHeight)){
+        let navHeight = document.getElementById('navigation-bar').clientHeight;
+        console.log(navHeight);
+        document.getElementById('home-inner').style.height = 'calc(100vh - '+navHeight+'px)'
+    }
 }
 
 window.onload = function(){
@@ -75,3 +94,6 @@ window.onload = function(){
 };
 
 switchHover()
+//resizeHome()
+window.addEventListener('resize', centerLogo)
+//window.addEventListener('resize', resizeHome)

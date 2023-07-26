@@ -70,6 +70,7 @@ body{
     scrollbar-width: none;
     -webkit-overflow-scrolling: touch;
     overscroll-behavior-y: contain;
+    margin-top: 1px;
 }
 #home::-webkit-scrollbar {
     display: none;
@@ -107,7 +108,8 @@ body{
     width: 100vw;
     height:calc(100vh - 87px);
     left: calc(100vw + 10px);
-    transition: left 2s;
+    visibility: hidden;
+    transition: visibility 2s, left 2s;
     z-index: 5;
     overflow-y: auto;
     -ms-overflow-style: none;
