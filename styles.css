@@ -22,6 +22,7 @@ body{
     display: flex;
     align-items: center;
     top:0;
+    z-index: 100;
 }
 
 #navbar-image-box{
@@ -36,15 +37,40 @@ body{
     height: 100%;
 }
 
-#main-content{
-    border: solid 0px #eef0e0;
+#nav-back-button{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    position: absolute;
+    z-index: 1;
+    margin-left: 15px;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 2s, opacity 2s ease;
+}
+
+#canvas{
+    display: flex;
+    margin-top: 87px;
+    position: relative;
+    overflow-x: hidden;
+    height: calc(100vh - 87px);
+}
+
+#home{
     width: 100vw;
     left: 0;
+    height:100%;
     z-index: 1;
+    visibility: visible;
+    opacity: 1;
+    transition: visibility 1s, opacity 1s;
 }
 
 #logo-div{
     height: 200px;
+    margin-top: 63px;
 }
 
 #image-logo{
@@ -65,37 +91,53 @@ body{
     flex-direction: column;
 }
 
-#nav-back-button{
-    height: 100%;
-    color: white;
-    display: flex;
-    align-items: center;
-    font-size: 30px;
-    font-weight: 700;
-    letter-spacing: 0.7px;
-    cursor: pointer;
-    text-decoration: none;
-    position: absolute;
-    z-index: 1;
-    margin-left: 15px;
-    visibility: hidden;
-    opacity: 0;
-    transition: visibility 2s, opacity 2s ease;
-}
-
-#window{
-    display: flex;
-    margin-top: 150px;
-}
-
-#wechat-content{
+#wechat-panel{
     position: absolute;
     width: 100vw;
-    color: white;
-    border: solid 1px white;
     left: calc(100vw + 10px);
     transition: left 2s;
+    z-index: 5;
+    padding-bottom: 15vh;
 }
+
+#wechat-panel-logo{
+    color: #eef0e0;
+    margin-top: 30px;
+    display: block;
+    text-align: center;
+}
+
+#wechat-panel-logo-icon-div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 210px;
+    margin-bottom: 18px;
+}
+
+#wechat-panel-logo-icon{
+    height: 100%;
+}
+
+#wechat-panel-logo-text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 21px;
+    height: 27px;
+}
+#wechat-panel-logo-text-divider{
+    height: 100%;
+    margin-left: 12px;
+    margin-right: 12px;
+}
+#wechat-method-content-telegram-icon {
+    top: 3px;
+}
+#wechat-method-content-down-icon {
+    top: 4px;
+}
+
 
 .box{
     border: solid 0px #eef0e0;
@@ -136,6 +178,53 @@ body{
     height: 60%;
 }
 
+.wechat-method{
+    display: block;
+    border: solid 1px #eef0e0;
+    color: #eef0e0;
+    margin-top: 48px;
+}
+
+.wechat-method-title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 30px;
+    border-bottom: solid 1px #eef0e0;
+    padding: 9px 2%;
+}
+.wechat-method-title-icon{
+    height: 30px;
+}
+.wechat-method-content{
+    align-items: center;
+    margin-top: 24px;
+    padding-left: 3%;
+    padding-right: 3%;
+    font-size: 21px;
+    line-height: 36px;
+    font-family: "Microsoft Yahei", sans-serif;
+}
+.wechat-method-content-icon{
+    position: relative;
+    height: 21px;
+}
+.wechat-method-footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 36px;
+    margin-bottom: 15px;
+    height: 36px;
+}
+.wechat-method-footer-icon{
+    height: 100%;
+}
+
+.deprecated{
+    text-decoration: line-through;
+}
+
 body.isHover .button:hover{
     color: #212121;
     border-color: #888;
@@ -158,18 +247,19 @@ body.isHover .button:hover .icon{
 
 
 @media only screen and (max-width: 750px) {
-    .box{
-        width: 80%;
-        margin-left: 10%;
-    }
     #navigation-bar{
         height: 11.682243vw;
     }
-    #window{
-        margin-top: 20vw;
+    #nav-back-button{
+        margin-left: 2vw;
+    }
+    #canvas{
+        margin-top: 11.682243vw;
+        height: calc(100vh - 11.682243vw);
     }
     #logo-div{
         height: 26.666667vw;
+        margin-top: 8.4vw;
     }
     #name-div{
         font-size: 4vw;
@@ -177,6 +267,35 @@ body.isHover .button:hover .icon{
     }
     #button-div{
         margin-top: 6.666667vw;
+    }
+    #wechat-panel-logo{
+        margin-top: 4vw;
+    }
+    #wechat-panel-logo-icon-div{
+        height: 28vw;
+        margin-bottom: 2.4vw;
+    }
+    #wechat-panel-logo-text{
+        height: 3.6vw;
+        font-size: 2.8vw;
+    }
+    #wechat-panel-logo-text-divider{
+        margin-left: 1.6vw;
+        margin-right: 1.6vw;
+    }
+    #wechat-method-content-telegram-icon {
+        top: 0.4vw;
+    }
+    #wechat-method-content-down-icon {
+        top: 0.4vw;
+    }
+    #wechat-method-content-down-icon {
+        top: 0.53333333333vw;
+    }
+
+    .box{
+        width: 80%;
+        margin-left: 10%;
     }
     .button{
         height: 10vw;
@@ -186,8 +305,27 @@ body.isHover .button:hover .icon{
         padding-right: 3vw;
         font-size: 3.3333333vw;
     }
-    #nav-back-button{
+    .wechat-method{
+        margin-top: 6.4vw;
+    }
+    .wechat-method-title{
         font-size: 4vw;
-        margin-left: 2vw;
+        padding: 1.2vw 2%;
+    }
+    .wechat-method-title-icon{
+        height: 4vw;
+    }
+    .wechat-method-content{
+        margin-top: 3.2vw;
+        font-size: 2.8vw;
+        line-height: 4.8vw;
+    }
+    .wechat-method-content-icon{
+        height: 2.8vw;
+    }
+    .wechat-method-footer{
+        margin-top: 4.8vw;
+        margin-bottom: 2vw;
+        height: 4.8vw;
     }
 }
