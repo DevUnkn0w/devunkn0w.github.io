@@ -61,7 +61,7 @@ body{
 #home{
     position: absolute;
     width: 100vw;
-    height: calc(100dvh - 87px);
+    height: 100%;
     left: 0;
     right:0;
     z-index: 1;
@@ -81,6 +81,7 @@ body{
 #home-inner{
     width: 100%;
     height:auto;
+    padding-bottom: 60px;
     border: solid 1px red;
 }
 
@@ -110,7 +111,7 @@ body{
 #wechat-panel{
     position: absolute;
     width: 100vw;
-    height: calc(100dvh - 87px);
+    height: 100%;
     left: calc(100vw + 10px);
     visibility: hidden;
     transition: visibility 2s, left 2s;
@@ -128,6 +129,7 @@ body{
 #wechat-panel-inner{
     width: 100%;
     height:auto;
+    padding-bottom: 60px;
     border: solid 1px red;
 }
 #wechat-panel-logo{
@@ -286,8 +288,8 @@ body.isHover .button:hover .icon{
         top: 11.6vw;
         height: calc(100dvh - 11.6vw);
     }
-    #home{
-        height: calc(100dvh - 11.6vw);
+    #home-inner{
+        padding-bottom: 8vw;
     }
     #logo-div{
         height: 26.666667vw;
@@ -300,8 +302,8 @@ body.isHover .button:hover .icon{
     #button-div{
         margin-top: 6.666667vw;
     }
-    #wechat-panel{
-        height: calc(100dvh - 11.6vw);
+    #wechat-panel-inner{
+        padding-bottom: 8vw;
     }
     #wechat-panel-logo{
         margin-top: 4vw;
