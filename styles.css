@@ -10,8 +10,6 @@ body *{
 body{
     background-color: black;
     font-family: Arial, Helvetica, sans-serif;
-    height: 100vh;
-    border: solid 1px red;
 }
 
 #navigation-bar{
@@ -55,9 +53,10 @@ body{
 #canvas{
     display: flex;
     top: 87px;
-    height: calc(100vh - 87px);
+    height: calc(100dvh - 87px);
     overflow-x: hidden;
     position: relative;
+    border: solid 1px red;
 }
 
 #home{
@@ -279,7 +278,7 @@ body.isHover .button:hover .icon{
     }
     #canvas{
         top: 11.6vw;
-        height: calc(100vh - 11.6vw);
+        height: calc(100dvh - 11.6vw);
     }
     #logo-div{
         height: 26.666667vw;
