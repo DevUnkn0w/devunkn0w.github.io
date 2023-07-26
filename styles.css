@@ -52,7 +52,7 @@ body{
 
 #canvas{
     display: flex;
-    margin-top: 87px;
+    top: 87px;
     position: fixed;
     overflow-x: hidden;
     height: calc(100vh - 87px);
@@ -89,6 +89,7 @@ body{
     margin-top: 50px;
     display: flex;
     flex-direction: column;
+    padding-bottom: 20vh;
 }
 
 #wechat-panel{
@@ -97,7 +98,7 @@ body{
     left: calc(100vw + 10px);
     transition: left 2s;
     z-index: 5;
-    padding-bottom: 15vh;
+    padding-bottom: 20vh;
 }
 
 #wechat-panel-logo{
@@ -254,7 +255,7 @@ body.isHover .button:hover .icon{
         margin-left: 2vw;
     }
     #canvas{
-        margin-top: 11.682243vw;
+        top: 11.682243vw;
         height: calc(100vh - 11.682243vw);
     }
     #logo-div{
