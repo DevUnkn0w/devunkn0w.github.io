@@ -54,32 +54,32 @@ body{
     display: flex;
     top: 87px;
     height: calc(100dvh - 87px);
-    position: relative;
-    overflow-x: hidden;
-    overflow-y: auto;
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-    -webkit-overflow-scrolling: touch;
-    overscroll-behavior-y: contain;
+    position: fixed;
+    overflow: hidden;
     border: solid 1px red;
 }
-#canvas::-webkit-scrollbar {
-    display: none;
-}
-
 #home{
-    position: absolute;
+    position: relative;
     width: 100vw;
+    height: calc(100dvh - 87px);
     left: 0;
     z-index: 1;
     visibility: visible;
     opacity: 1;
     transition: visibility 1s, opacity 1s;
+    overflow-y: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior-y: contain;
     border: solid 1px green;
+}
+#home::-webkit-scrollbar {
+    display: none;
 }
 #home-inner{
     width: 100%;
-    position: relative;
+    position: absolute;
     height:auto;
 }
 
