@@ -25,7 +25,7 @@ function wechatInfo(){
     document.getElementById('navbar-image-box').style.left = 'calc(50% - '+logoWidth+'px)';
     document.getElementById('nav-back-button').style.visibility = 'visible';
     document.getElementById('nav-back-button').style.opacity = '1';
-    //document.getElementById('canvas').scrollTo({ top: 0, behavior: 'smooth' });
+    document.getElementById('wechat-panel').scrollTo({ top: 0, behavior: 'instant' });
     document.getElementById('wechat-panel').style.left = '0';
     document.getElementById('home').style.transitionDuration = '1s';
     document.getElementById('home').style.transitionTimingFunction = 'ease';
@@ -39,6 +39,7 @@ function toHome(){
     document.getElementById('nav-back-button').style.opacity = '0';
     document.getElementById('navbar-image-box').style.left = '0';
     document.getElementById('wechat-panel').style.left = 'calc(100vw + 10px)';
+    document.getElementById('home').scrollTo({ top: 0, behavior: 'instant' });
     document.getElementById('home').style.transitionTimingFunction= 'ease-in';
     document.getElementById('home').style.transitionDuration = '2.5s';
     document.getElementById('home').style.transitionDelay = '0.3s';
