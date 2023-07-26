@@ -55,17 +55,18 @@ body{
     top: 87px;
     overflow: hidden;
     position: relative;
+    height: calc(100vh - 87px);
 }
 
 #home{
     width: 100vw;
     left: 0;
-    height:calc(100vh - 87px);
+    height:100%;
     z-index: 1;
     visibility: visible;
     opacity: 1;
     transition: visibility 1s, opacity 1s;
-    overflow-y: visible;
+    overflow-y: auto;
     -ms-overflow-style: none;
     scrollbar-width: none;
     -webkit-overflow-scrolling: touch;
@@ -107,7 +108,7 @@ body{
 #wechat-panel{
     position: absolute;
     width: 100vw;
-    height:calc(100vh - 87px);
+    height:100%;
     left: calc(100vw + 10px);
     visibility: hidden;
     transition: visibility 2s, left 2s;
@@ -279,8 +280,6 @@ body.isHover .button:hover .icon{
     }
     #canvas{
         top: 11.682243vw;
-    }
-    #home{
         height: calc(100vh - 11.682243vw);
     }
     #logo-div{
@@ -293,9 +292,6 @@ body.isHover .button:hover .icon{
     }
     #button-div{
         margin-top: 6.666667vw;
-    }
-    #wechat-panel{
-        height: calc(100vh - 11.682243vw);
     }
     #wechat-panel-logo{
         margin-top: 4vw;
