@@ -28,6 +28,7 @@ function wechatInfo(){
     document.getElementById('nav-back-button').style.opacity = '1';
     document.getElementById('wechat-panel').style.left = '0';
     document.getElementById('wechat-panel').style.visibility = 'visible';
+    document.getElementById('wechat-panel').scrollTo({ top: 0, behavior: 'instant' });
     document.getElementById('home').style.transitionDuration = '1s';
     document.getElementById('home').style.transitionTimingFunction = 'ease';
     document.getElementById('home').style.transitionDelay = '0s';
@@ -58,6 +59,21 @@ function centerLogo(){
     }
 }
 
+function resizeInner(){
+    let home = document.getElementById('home');
+    let wechat_panel = document.getElementById('wechat-panel');
+    if(home.scrollHeight<=home.clientHeight){
+        document.getElementById('home-inner').style.height = 'calc(100% + 1px)';
+    }else{
+        document.getElementById('home-inner').style.height = 'auto';
+    }
+    if(wechat_panel.scrollHeight<=wechat_panel.clientHeight){
+        document.getElementById('wechat-panel-inner').style.height = 'calc(100% + 1px)';
+    }else{
+        document.getElementById('wechat-panel-inner').style.height = 'auto';
+    }
+}
+
 window.onload = function(){
     window.setTimeout(function(){
         document.getElementById('twitter-button').style.visibility = 'visible';
@@ -85,5 +101,7 @@ window.onload = function(){
     }, 4200);
 };
 
-switchHover()
-window.addEventListener('resize', centerLogo)
+switchHover();
+resizeInner();
+window.addEventListener('resize', centerLogo);
+window.addEventListener('resize', resizeInner);
