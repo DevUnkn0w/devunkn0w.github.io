@@ -62,12 +62,12 @@ function centerLogo(){
 function resizeInner(){
     let home = document.getElementById('home');
     let wechat_panel = document.getElementById('wechat-panel');
-    if(home.scrollHeight<=(home.clientHeight+1)){
+    if(home.scrollHeight<=home.clientHeight){
         document.getElementById('home-inner').style.height = 'calc(100% + 1px)';
     }else{
         document.getElementById('home-inner').style.height = 'auto';
     }
-    if(wechat_panel.scrollHeight<=(wechat_panel.clientHeight+1)){
+    if(wechat_panel.scrollHeight<=wechat_panel.clientHeight){
         document.getElementById('wechat-panel-inner').style.height = 'calc(100% + 1px)';
     }else{
         document.getElementById('wechat-panel-inner').style.height = 'auto';
