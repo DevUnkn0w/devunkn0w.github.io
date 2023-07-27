@@ -55,7 +55,7 @@ body{
     top: 87px;
     height: calc(100dvh - 87px);
     width: 100vw;
-    position: relative;
+    position: fixed;
     overflow: hidden;
 }
 #home{
