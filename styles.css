@@ -53,7 +53,8 @@ body{
 #canvas{
     display: flex;
     top: 87px;
-    height: calc(100dvh - 87px);
+    height: calc(100vh - 87px);
+    max-height: calc(100dvh - 87px);
     width: 100vw;
     position: fixed;
     overflow: hidden;
@@ -286,7 +287,8 @@ body.isHover .button:hover .icon{
     }
     #canvas{
         top: 11.6vw;
-        height: calc(100dvh - 11.6vw);
+        height: calc(100vh - 11.6vw);
+        max-height: calc(100dvh - 11.6vw);
     }
     #home-inner{
         padding-bottom: 8vw;
