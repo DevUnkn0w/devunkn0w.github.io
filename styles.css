@@ -161,7 +161,7 @@ body{
     border: solid 1px red;
 }
 #wechat-panel-logo-text-divider{
-    height: 100% !important;
+    height: 27px;
     margin-left: 12px;
     margin-right: 12px;
     border: solid 1px green;
@@ -321,6 +321,7 @@ body.isHover .button:hover .icon{
         font-size: 2.8vw;
     }
     #wechat-panel-logo-text-divider{
+        height: 3.6vw;
         margin-left: 1.6vw;
         margin-right: 1.6vw;
     }
