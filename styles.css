@@ -162,10 +162,8 @@ body{
 }
 #wechat-panel-logo-text-divider{
     height: 100%;
-    width: auto;
     margin-left: 12px;
     margin-right: 12px;
-    border: solid 1px green;
 }
 #wechat-method-content-telegram-icon {
     top: 3px;
@@ -322,7 +320,6 @@ body.isHover .button:hover .icon{
         font-size: 2.8vw;
     }
     #wechat-panel-logo-text-divider{
-        height: 3.6vw;
         margin-left: 1.6vw;
         margin-right: 1.6vw;
     }
