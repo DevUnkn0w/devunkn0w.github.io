@@ -158,11 +158,13 @@ body{
     align-items: center;
     font-size: 21px;
     height: 27px;
+    border: solid 1px red;
 }
 #wechat-panel-logo-text-divider{
     height: 100%;
     margin-left: 12px;
     margin-right: 12px;
+    border: solid 1px green;
 }
 #wechat-method-content-telegram-icon {
     top: 3px;
